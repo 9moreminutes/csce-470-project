@@ -1,8 +1,28 @@
 body {
   padding-top: 50px;
+  /*background: #0EBFE9;*/
 }
+
 .search-area {
   padding: 40px 15px;
   text-align: center;
-  vertical-align: center;
+  vertical-align: middle;
+  /*background: #444444;*/
+}
+
+.trackflix-title {
+	padding-top: 75px
+}
+
+.movie-title {
+	text-align: center;
+}
+
+.movie-img {
+	margin: 0px auto; 
+	display:block;
+}
+
+.result {
+	height: 150px;
 }
