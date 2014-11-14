@@ -16,7 +16,16 @@
     <!-- Custom styles for this template -->
     <link href="css/trackflix.css" rel="stylesheet">
   </head>
-
+    <div id="pop1" class="popbox">
+        <h2>Success!</h2>
+            <p>This is an example popbox.</p>
+        </div>
+    <div id="pop2" class="popbox">
+        <h2>Movie Title</h2>
+            <p>Year</p>
+            <p>Stars</p>
+            <p>Genre</p>
+    </div>
   <body>
 
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -70,7 +79,9 @@
       <div class="row result">
         <div class="col-md-2 with-artist">
           <div class="row">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX300.jpg">
+            </a>
           </div>
           <div class="row">
             <h4 class="movie-title">Skyfall <small>(2013)</small></h4>
@@ -78,37 +89,49 @@
         </div>
         <div class="col-md-10 related-movies">
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Frozen <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Rush <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQxMjY4NzUyM15BMl5BanBnXkFtZTcwMDI4NTk5Mw@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQxMjY4NzUyM15BMl5BanBnXkFtZTcwMDI4NTk5Mw@@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Aladin <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyNTcxNzYwMV5BMl5BanBnXkFtZTgwMzQzNzM5MjE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyNTcxNzYwMV5BMl5BanBnXkFtZTgwMzQzNzM5MjE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Saw <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Gone Girl <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Jaws <small>(2013)</small></h4>
             </div>
@@ -118,7 +141,9 @@
       <div class="row result">
         <div class="col-md-2 with-artist">
           <div class="row">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyODkzNDgzMF5BMl5BanBnXkFtZTcwMDMxMDI4Nw@@._V1_SX300.jpg">
+            </a>
           </div>
           <div class="row">
             <h4 class="movie-title">Skyfall <small>(2013)</small></h4>
@@ -126,37 +151,49 @@
         </div>
         <div class="col-md-10 related-movies">
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQ1MjQwMTE5OF5BMl5BanBnXkFtZTgwNjk3MTcyMDE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Frozen <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQyMDE0MTY0OV5BMl5BanBnXkFtZTcwMjI2OTI0OQ@@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Rush <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQxMjY4NzUyM15BMl5BanBnXkFtZTcwMDI4NTk5Mw@@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTQxMjY4NzUyM15BMl5BanBnXkFtZTcwMDI4NTk5Mw@@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Aladin <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyNTcxNzYwMV5BMl5BanBnXkFtZTgwMzQzNzM5MjE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMjAyNTcxNzYwMV5BMl5BanBnXkFtZTgwMzQzNzM5MjE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Saw <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BMTk0MDQ3MzAzOV5BMl5BanBnXkFtZTgwNzU1NzE3MjE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Gone Girl <small>(2013)</small></h4>
             </div>
           </div>
           <div class="col-md-2">
-            <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg">
+            <a href="#" class="popper" data-popbox="pop2">
+                <img class="movie-img" height="200" src="http://ia.media-imdb.com/images/M/MV5BNDcxODkyMjY4MF5BMl5BanBnXkFtZTgwOTk5NTc5MDE@._V1_SX300.jpg">
+            </a>
             <div class="row">
               <h4 class="movie-title">Jaws <small>(2013)</small></h4>
             </div>
@@ -211,5 +248,8 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script src="js/trackflix.js"></script>
+    
   </body>
+  
 </html>
