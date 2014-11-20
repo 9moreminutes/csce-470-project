@@ -3,6 +3,7 @@ from mrjob.job import MRJob
 import re
 import math
 import nltk
+from stemming.porter2 import stem
 from __future__ import division
 
 class WordCounter(MRJob):
@@ -25,8 +26,9 @@ class WordCounter(MRJob):
 
 	    for plot in plots:
 	        for word in re.findall(r'\w+',plot['text'].lower()):
-	        	#TODO stem and remove stop words
-	            yield (title, word), 1
+	        	if word in self.stop:
+	        		continue
+	            yield (title, stem(word)), 1
 
     def sum_words(self, key, counts):
         total = 0
