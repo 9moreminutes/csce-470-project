@@ -20,4 +20,4 @@ To run a small test of the steps we take to process the data,
 - go to the processing/ folder
 - make sure you have the python libraries installed
 - run `python countwords.py sampledata.json > test.out` to calculate the tfidf vectors for each title in the sample data
-- run `python find_similarity.py > similaity_matrix.out` to caclulate a similarity matrix
+- run `python find_similarity.py` to generate a json similarity matrix
