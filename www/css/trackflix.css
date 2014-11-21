@@ -1,0 +1,95 @@
+body {
+  padding-top: 50px;
+  background: #506087;
+}
+
+.search-area {
+  padding: 40px 15px;
+  text-align: center;
+  vertical-align: middle;
+  /*background: #444444;*/
+}
+
+/*.search-results {
+	background-color: #739AA1;
+}*/
+
+.trackflix-title {
+	padding-top: 75px
+}
+
+.movie-title {
+	text-align: center;
+}
+
+.movie-img {
+	margin: 5px auto; 
+	display:block;
+}
+
+.with-artist {
+	background-color: #E8E8E8;
+	/*padding: 5px;*/
+	border: 2px solid;
+	/*border-color: #739AA1;*/
+	border-radius: 15px;
+	margin-top: 5px;
+}
+
+/*.result {
+	border: 5px solid;
+	border-bottom-style: none;
+	border-color: #739AA1;
+}*/
+
+.related-movies {
+	background-color: #E8E8E8;
+	/*padding: 5px;*/
+	border: 2px solid;
+	/*border-color: #739AA1;*/
+	border-radius: 15px;
+	margin-top: 5px;
+}
+
+.results-header {
+	background-color: #E8E8E8;
+	border: 2px solid;
+	border-radius: 15px;
+}
+
+.well {
+	background-color: #E8E8E8;
+	border-color: #020202;
+}
+
+.contact-face {
+	margin: 0px auto; 
+	display:block;
+
+}
+
+.popbox {
+    display: none;
+    position: absolute;
+    z-index: 99999;
+    width: 400px;
+    padding: 10px;
+    background: #EEEFEB;
+    color: #000000;
+    border: 1px solid #4D4F53;
+    margin: 0px;
+    -webkit-box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+    box-shadow: 0px 0px 5px 0px rgba(164, 164, 164, 1);
+}
+
+.popbox h2
+{
+    background-color: #4D4F53;
+    color:  #E3E5DD;
+    font-size: 14px;
+    display: block;
+    width: 100%;
+    margin: -10px 0px 8px -10px;
+    padding: 5px 10px;
+
+}
