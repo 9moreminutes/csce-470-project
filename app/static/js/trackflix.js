@@ -2,7 +2,7 @@ $("#searchButton").on("click", function(e) {
 	e.preventDefault();
 	$.ajax({
 		type: "GET",
-		url: "/search",
+		url: "/trackflix/search",
 		data: $("#searchForm").serialize()
 	})
 	.done(function(html) {
