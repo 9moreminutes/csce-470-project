@@ -3,7 +3,7 @@ app = Flask(__name__)
 
 @app.route("/trackflix")
 def hello():
-    return "Hello!"
+    return render_template('index.html')
 
 @app.route("/trackflix/search")
 def search():
