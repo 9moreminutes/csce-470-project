@@ -3,14 +3,14 @@ import simplejson as json
 from mrjob.job import MRJob
 import re
 import math
-import nltk
+#import nltk
 from stemming.porter2 import stem
 
 class TfidfCalculator(MRJob):
     
     def __init__(self, *args, **kwargs):
         super(TfidfCalculator, self).__init__(*args, **kwargs)
-        self.stop = nltk.corpus.stopwords.words('english')
+        #self.stop = nltk.corpus.stopwords.words('english')
 
     def counter(self, _, line):
         # load the data from json
@@ -25,8 +25,8 @@ class TfidfCalculator(MRJob):
 
         for plot in plots:
             for word in re.findall(r'\w+',plot['text'].lower()):
-                if word in self.stop:
-                    continue
+                #if word in self.stop:
+                    #continue
                 yield (title, stem(word)), 1
 
     def sum_words(self, key, counts):
