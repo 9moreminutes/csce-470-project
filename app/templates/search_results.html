@@ -6,7 +6,7 @@
     <h4 align="left">Related movies</h4>
   </div>
 </div>
-{% for result, related in results %}
+{% for result, related in results.iteritems() %}
 <div class="row result">
   <div class="col-md-2 with-artist">
     <div class="row">
