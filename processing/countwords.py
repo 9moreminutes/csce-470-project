@@ -69,8 +69,8 @@ class TfidfCalculator(MRJob):
         if doc_freq == 0:
             idf = 0
         else:
-            # idf = math.log( 395101 / doc_freq )
-            idf = math.log( 20 / doc_freq )
+            idf = math.log( 395101 / doc_freq )
+            #idf = math.log( 20 / doc_freq )
         # found this number with the following query in mongo
         #   db.movies.find({"plot": { "$exists": true}}).count()
         yield title, (word, tf, idf)

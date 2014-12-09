@@ -1,6 +1,7 @@
 import math   
 import simplejson as json 
 import operator
+import sys
 
 def magnitude(tfidf_vector):
     total = 0
@@ -26,7 +27,9 @@ def cosine_tfidf(one, two):
     return cosine_value
 
 def main():
-    filename = 'filtered_data_500.txt'
+    start = int(sys.argv[1])
+    end = int(sys.argv[2])
+    filename = 'filtered_data_2000.txt'
     tfidf_lists = {}
     titles = []
     with open(filename) as f:
@@ -47,15 +50,28 @@ def main():
 #         'title2',
 #     ]
 # }
-    count = 0
+    count = start
     total = len(titles)
-    with open("all_similarity_matrix_500.json", 'w') as f:
-        for title1 in titles:
+    print total
+    outfile = "all_similarity_matrix_2000_" + str(start) + ".json" 
+    with open(outfile, 'w') as f:
+        my_title_block = titles[start:end]
+        for title1 in my_title_block:
+            # if '(TV)' in title1:
+            #     print 'SKIPPING:', title1
+            #     count+=1
+            #     continue
+            # if '(VG)' in title1:
+            #     print 'SKIPPING:', title1
+            #     count+=1
+            #     continue
             json_dict = {}
             json_dict['name'] = title1
             similarities = {}
             for title2 in titles:
                 if title1 == title2: continue
+                # if '(TV)' in title2: continue
+                # if '(VG)' in title2: continue
                 cos_value = cosine_tfidf(tfidf_lists[title1], tfidf_lists[title2])
                 similarities[title2] = cos_value
             top6_tuples = sorted(similarities.items(), key=operator.itemgetter(1), reverse=True)[:6]
@@ -64,6 +80,7 @@ def main():
                 top_similarities[movie] = sim
             json_dict['similarities'] = top_similarities
             json.dump(json_dict, f)
+            f.write('\n')
             count += 1
             print 'Done with', title1, count, 'of', total
 

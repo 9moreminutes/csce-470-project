@@ -1,7 +1,21 @@
 import re
+import pymongo
 soundtracks = {}
 
-with open('testdata.txt') as f:
+filename = 'sample_ratings.txt'
+valid_movies=[]
+with open(filename) as f:
+	for line in f:
+		split_line = line.split()
+		num_ratings = int(split_line[1])
+		name = ' '.join(split_line[3:])
+		if num_ratings > 2000:
+			valid_movies.append(name)
+
+conn = pymongo.Connection('localhost', 27017)
+db = conn['imdb']
+
+with open('soundtracks.txt') as f:
 	lines = f.readlines()
 
 	# split lines into sublists by movie
@@ -9,11 +23,16 @@ with open('testdata.txt') as f:
 	ends = indices + [len(lines)]
 	begins = [0] + [x + 1 for x in indices]
 	raw_soundtracks = [lines[begin:end] for (begin, end) in zip(begins, ends)]
-
+	count = 0
+	total = len(raw_soundtracks)
 	for title in raw_soundtracks:
+
 		soundtrack = []
 		movie_title = title[0][2:].strip()
-
+		if movie_title not in valid_movies: continue
+		if '(TV)' in movie_title: continue
+		if '(VG)' in movie_title: continue
+		count += 1
 		# split list into sublists of song info
 		songs_raw = title[1:]
 		song_indices = [i for (i, x) in enumerate(songs_raw) if x.startswith('-')]
@@ -54,10 +73,13 @@ with open('testdata.txt') as f:
 
 			# put the song in the soundtrack list for this movie
 			soundtrack.append(song)
-		
-		# add the soundtrack for this movie to our full dict of soundtracks
-		soundtracks[movie_title] = soundtrack
 
-for movie, soundtrack in soundtracks.iteritems():
-	print movie
-	print soundtrack
+		# add the soundtrack for this movie to our full dict of soundtracks
+
+		query_dict = {'name': movie_title}
+		update_dict = {'$set': {'soundtrack': soundtrack}}
+		print query_dict
+		print update_dict
+		db.movies.update(query_dict, update_dict, True)
+		soundtracks[movie_title] = soundtrack
+		print 'Done with', count, 'of', total
